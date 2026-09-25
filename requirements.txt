@@ -1,0 +1,13 @@
+langchain
+langgraph
+langchain-google-genai
+langchain-mistralai
+tavily-python
+beautifulsoup4
+requests
+python-dotenv
+langchain-tavily
+transformers
+torch
+langchain_openai
+streamlit
