@@ -48,18 +48,26 @@ st.markdown(get_css(st.session_state.theme), unsafe_allow_html=True)
 
 
 # =========================================================
-# TOP BAR (THEME TOGGLE)
+# TOP BAR (THEME TOGGLE & GITHUB)
 # =========================================================
 
-top_left, top_right = st.columns([6, 1])
+# Split the layout into 3 columns instead of 2
+top_left, top_theme, top_github = st.columns([6, 1, 1])
 
-with top_right:
+with top_theme:
     toggle_label = "☀️ Light" if st.session_state.theme == "dark" else "🌙 Dark"
     if st.button(toggle_label, use_container_width=True):
         st.session_state.theme = (
             "light" if st.session_state.theme == "dark" else "dark"
         )
         st.rerun()
+
+with top_github:
+    st.link_button(
+        "🐙 GitHub", 
+        "https://github.com/Ujan2007/multiagentresearch", 
+        use_container_width=True
+    )
 
 
 # =========================================================
@@ -73,8 +81,8 @@ with top_right:
 st.markdown(
 """
 <div class="hero">
-<div class="hero-badge">✦ AI-POWERED RESEARCH</div>
-<h1 class="hero-title">Research Agent</h1>
+<div class="hero-badge">✦ Multi Agent Research System</div>
+<h1 class="hero-title">Deep Research Agent</h1>
 <div class="hero-subtitle">A multi-agent system that searches, reads and synthesizes information from the web.</div>
 </div>
 """,
