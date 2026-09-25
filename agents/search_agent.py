@@ -10,7 +10,7 @@ load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-search = TavilySearch(max_results=5)
+search = TavilySearch(max_results=10)
 
 
 @tool
@@ -53,6 +53,9 @@ Avoid:
 Do not answer the research question.
 Do not summarize the sources.
 Do not scrape webpage content.
+
+After searching, return the 10 most relevant unique URLs you found.
+You MUST return up to 8-10 URLs whenever 6 relevant sources are available.
 
 After completing your searches, return ONLY valid JSON in this exact format:
 
