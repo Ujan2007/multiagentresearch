@@ -1,5 +1,7 @@
 # 🔬 Multi-Agent Research Agent
 
+Use the application at --> https://multiagentresearch-5gzw9xrlrfm3ygfu2udpcl.streamlit.app/
+
 A multi-agent AI research system that takes a research question, searches the web for relevant sources, extracts useful information from those sources, and synthesizes everything into a structured research report.
 
 The project is built using **LangChain, LangGraph, Hugging Face, Mistral, Tavily, BeautifulSoup, and Streamlit**.
